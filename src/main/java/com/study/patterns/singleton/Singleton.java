@@ -1,4 +1,4 @@
-package com.study.patterns;
+package com.study.patterns.singleton;
 
 /**
  * https://habr.com/ru/post/27108/
