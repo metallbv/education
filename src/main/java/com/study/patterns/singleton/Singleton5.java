@@ -1,4 +1,4 @@
-package com.study.patterns;
+package com.study.patterns.singleton;
 
 public final class Singleton5 {
   private static volatile Singleton5 instance;
