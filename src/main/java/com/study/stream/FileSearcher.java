@@ -1,6 +1,7 @@
 package com.study.stream;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,7 +17,17 @@ public class FileSearcher {
 
   public static void main(String[] args) {
 
-    List<String> list = Arrays.stream(args)
+    IntStream.range(0, 10)
+      .parallel()
+      .forEach(System.out::println);
+
+    /*final List<Integer> ints = new ArrayList<>();
+    IntStream.range(0, 1000000)
+      .parallel()
+      .forEach(j -> ints.add(j));
+    System.out.println("Size " + ints.size());*/
+
+    /*List<String> list = Arrays.stream(args)
       .filter(s -> s.length() <= 2)
       .collect(Collectors.toList());
 
@@ -33,6 +44,20 @@ public class FileSearcher {
     for (File file: searchHiddenFiles("C:\\Windows")) {
       System.out.println("Hidden file - " + file.getName());
     }
+
+    // parallel streams
+    *//*list.parallelStream()
+      .filter(x -> x > 10)
+      .map(x -> x * 2)
+      .collect(Collectors.toList());*//*
+
+    int i = IntStream.range(0, 10)
+      .parallel()
+      .map(x -> x * 10)
+      .sum();
+
+    System.out.println("i " + i);*/
+
   }
 
   public static File[] searchHiddenFiles(String filePath) {
