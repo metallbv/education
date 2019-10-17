@@ -17,9 +17,23 @@ public class FileSearcher {
 
   public static void main(String[] args) {
 
-    IntStream.range(0, 10)
+    final List<Integer> ints = new ArrayList<>();
+    /*IntStream.range(0, 200)
       .parallel()
-      .forEach(System.out::println);
+      .forEach(j -> ints.add(j));*/
+    IntStream.range(0, 100)
+      .parallel()
+      .forEach(j -> ints.add(j));
+    System.out.println("Size " + ints.size());
+    int counter = 0;
+    for (int i: ints) {
+      System.out.println(counter + " - " +i);
+      counter++;
+    }
+
+    /*IntStream.range(0, 10)
+      .parallel()
+      .forEach(System.out::println);*/
 
     /*final List<Integer> ints = new ArrayList<>();
     IntStream.range(0, 1000000)
