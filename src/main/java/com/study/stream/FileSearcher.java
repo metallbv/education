@@ -21,10 +21,12 @@ public class FileSearcher {
     /*IntStream.range(0, 200)
       .parallel()
       .forEach(j -> ints.add(j));*/
+
     IntStream.range(0, 100)
       .parallel()
       .forEach(j -> ints.add(j));
     System.out.println("Size " + ints.size());
+
     int counter = 0;
     for (int i: ints) {
       System.out.println(counter + " - " +i);
