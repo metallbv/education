@@ -1,5 +1,10 @@
 package com.study.concurrency;
 
+/**
+ * https://www.youtube.com/watch?v=zxZ0BXlTys0&feature=youtu.be
+ * https://www.youtube.com/watch?v=umTVNoG3760
+ */
+
 public class Account {
 
     private long balance;
